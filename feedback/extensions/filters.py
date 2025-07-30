@@ -1,7 +1,7 @@
 """
 Open edX Filters needed for instructor dashboard integration.
 """
-import importlib.resources
+import importlib_resources
 from crum import get_current_request
 from django.conf import settings
 from django.template import Context, Template
@@ -75,7 +75,7 @@ class AddFeedbackTab(PipelineStep):
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
-        return importlib.resources.files("feedback").joinpath(path).read_text(encoding="utf-8")
+        return importlib_resources.files("feedback").joinpath(path).read_text(encoding="utf-8")
 
 
 def load_blocks(request, course):
