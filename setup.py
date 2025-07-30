@@ -50,6 +50,9 @@ setup(
          "lms.djangoapp": [
             "feedback = feedback.apps:FeedbackConfig",
         ],
+        "openedx_filters": [
+            "org.openedx.learning.instructor.dashboard.render.started.v1 = feedback.extensions.filters:AddFeedbackTab",
+        ],
     },
     package_data=package_data("feedback", ["static", "public", "templates", "translations"]),
 )
